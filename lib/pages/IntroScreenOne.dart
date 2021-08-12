@@ -62,7 +62,7 @@ class _IntroScreenOneState extends State<IntroScreenOne> {
           SizedBox(height: 20),
           _phoneImage(),
           SizedBox(height: 100),
-          _loginBtn()
+          _nextBtn()
         ])));
   }
 }
@@ -79,7 +79,7 @@ Widget _phoneImage() {
   );
 }
 
-Widget _loginBtn() {
+Widget _nextBtn() {
   // ignore: deprecated_member_use
   return FlatButton(
     onPressed: () => {},

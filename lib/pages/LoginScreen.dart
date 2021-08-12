@@ -2,18 +2,18 @@ import 'package:case_craft_ui/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class IntroScreenTwo extends StatefulWidget {
-  const IntroScreenTwo({Key key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key key}) : super(key: key);
 
   @override
-  _IntroScreenTwoState createState() => _IntroScreenTwoState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _IntroScreenTwoState extends State<IntroScreenTwo> {
+class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: kPurple,
+        backgroundColor: kWhite,
         body: SingleChildScrollView(
             child: Column(children: [
           Padding(padding: EdgeInsets.all(40)),
@@ -22,12 +22,12 @@ class _IntroScreenTwoState extends State<IntroScreenTwo> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Text(
-                "Blow Minds",
+                "We Deliver",
                 style: GoogleFonts.montserrat(
                   fontSize: 30,
                   fontStyle: FontStyle.italic,
                   fontWeight: FontWeight.bold,
-                  color: kWhite,
+                  color: kPurple,
                 ),
               ),
             ],
@@ -37,10 +37,10 @@ class _IntroScreenTwoState extends State<IntroScreenTwo> {
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
-              Text("Like Poww!!  when you take",
+              Text("Design, order and relax. Let",
                   style: GoogleFonts.montserrat(
                     fontSize: 23,
-                    color: kWhite,
+                    color: kPurple,
                     fontStyle: FontStyle.italic,
                     fontWeight: FontWeight.w400,
                   ))
@@ -50,45 +50,68 @@ class _IntroScreenTwoState extends State<IntroScreenTwo> {
             mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
-              Text("out your airpod in public",
+              Text("us worry about the lifting",
                   style: GoogleFonts.montserrat(
                     fontSize: 23,
-                    color: kWhite,
+                    color: kPurple,
                     fontStyle: FontStyle.italic,
                     fontWeight: FontWeight.w400,
                   ))
             ],
           ),
           SizedBox(height: 70),
-          _airpodImage(),
-          SizedBox(height: 100),
-          _nextBtn()
+          _deliveryImage(),
+          SizedBox(height: 40),
+          _loginBtn(),
+          SizedBox(height: 20),
+          _createAccountBtn()
         ])));
   }
 }
 
-Widget _airpodImage() {
+Widget _deliveryImage() {
   return Column(
-    mainAxisAlignment: MainAxisAlignment.center,
+    crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Container(
-        width: 800,
-        child: Image.asset(UIGuide.airpod_image),
+        width: 400,
+        child: Image.asset(UIGuide.delivery_image),
       ),
     ],
   );
 }
 
-Widget _nextBtn() {
+Widget _loginBtn() {
   // ignore: deprecated_member_use
   return FlatButton(
     onPressed: () => {},
-    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 120),
     shape: new RoundedRectangleBorder(
-      borderRadius: new BorderRadius.circular(30.0),
+      borderRadius: new BorderRadius.circular(50.0),
     ),
     child: Text(
-      "Next",
+      "Log in",
+      style: GoogleFonts.montserrat(
+        fontSize: 20,
+        color: kWhite,
+        letterSpacing: 0.168,
+        fontStyle: FontStyle.italic,
+      ),
+    ),
+    color: kPurple,
+  );
+}
+
+Widget _createAccountBtn() {
+  // ignore: deprecated_member_use
+  return FlatButton(
+    onPressed: () => {},
+    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 70),
+    shape: new RoundedRectangleBorder(
+      borderRadius: new BorderRadius.circular(50.0),
+    ),
+    child: Text(
+      "Create account",
       style: GoogleFonts.montserrat(
         fontSize: 20,
         color: kPurple,

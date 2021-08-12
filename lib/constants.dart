@@ -9,4 +9,6 @@ class UIGuide {
   static final String airpod_image = "assets/images/Airpod.png";
   // ignore: non_constant_identifier_names
   static final String phone_mock = "assets/images/Phone mock.png";
+  // ignore: non_constant_identifier_names
+  static final String delivery_image = "assets/images/Deliver.png";
 }
