@@ -1,4 +1,4 @@
-import 'package:case_craft_ui/pages/LoginScreen.dart';
+import 'package:case_craft_ui/pages/IntroScreenOne.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Case Craft',
-      home: LoginScreen(),
+      home: IntroScreenOne(),
     );
   }
 }

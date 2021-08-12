@@ -7,9 +7,9 @@ Route routeOne() {
     pageBuilder: (context, animation, secondaryAnimation) =>
         const IntroScreenTwo(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
-      const begin = Offset(0.0, 1.0);
+      const begin = Offset(1.0, 0.0);
       const end = Offset.zero;
-      const curve = Curves.ease;
+      const curve = Curves.easeInOut;
 
       var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
 
@@ -26,7 +26,7 @@ Route routeTwo() {
     pageBuilder: (context, animation, secondaryAnimation) =>
         const LoginScreen(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
-      const begin = Offset(0.0, 1.0);
+      const begin = Offset(1.0, 0.0);
       const end = Offset.zero;
       const curve = Curves.ease;
 
