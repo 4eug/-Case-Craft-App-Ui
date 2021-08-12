@@ -1,4 +1,5 @@
-import 'package:case_craft_ui/pages/SplashScreens.dart';
+import 'package:case_craft_ui/pages/IntroScreenOne.dart';
+import 'package:case_craft_ui/pages/IntroScreenTwo.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -7,7 +8,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Case Craft',
-      home: SplashScreens(),
+      home: IntroScreenOne(),
     );
   }
 }
