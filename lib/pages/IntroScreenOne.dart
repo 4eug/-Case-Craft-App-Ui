@@ -1,4 +1,5 @@
 import 'package:case_craft_ui/constants.dart';
+import 'package:case_craft_ui/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -62,7 +63,7 @@ class _IntroScreenOneState extends State<IntroScreenOne> {
           SizedBox(height: 20),
           _phoneImage(),
           SizedBox(height: 100),
-          _nextBtn()
+          _nextBtn(context)
         ])));
   }
 }
@@ -79,10 +80,10 @@ Widget _phoneImage() {
   );
 }
 
-Widget _nextBtn() {
+Widget _nextBtn(context) {
   // ignore: deprecated_member_use
   return FlatButton(
-    onPressed: () => {},
+    onPressed: () => {Navigator.of(context).push(routeOne())},
     padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
     shape: new RoundedRectangleBorder(
       borderRadius: new BorderRadius.circular(30.0),
