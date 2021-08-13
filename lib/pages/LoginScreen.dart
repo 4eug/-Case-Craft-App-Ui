@@ -109,7 +109,7 @@ Widget _loginBtn(context) {
             ),
           ),
           Icon(
-            Icons.add,
+            Icons.arrow_forward_ios,
             color: Colors.white,
           ),
         ],
@@ -150,7 +150,7 @@ Widget _createBtn(context) {
             ),
           ),
           Icon(
-            Icons.add,
+            Icons.arrow_forward_ios,
             color: kPurple,
           ),
         ],
