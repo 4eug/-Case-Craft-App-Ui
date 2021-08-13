@@ -62,7 +62,7 @@ class _IntroScreenOneState extends State<IntroScreenOne> {
           ),
           SizedBox(height: 30),
           _phoneImage(),
-          SizedBox(height: 100),
+          SizedBox(height: 90),
           _nextBtn(context)
         ])));
   }
