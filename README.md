@@ -6,7 +6,7 @@ A quick Flutter Clone of Muhammad Abdull's CaseCraft Ui ✌
 
 <table>
     <td>
-     <img src="assets/screenshots/flutter_02.png/" height="500em" />
+     <img src="assets/screenshots/flutter_01.png/" height="500em" />
     </td>
     <td>
       <img src="assets/screenshots/flutter_02.png/" height="500em" />
