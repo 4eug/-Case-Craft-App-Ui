@@ -62,9 +62,9 @@ class _LoginScreenState extends State<LoginScreen> {
           SizedBox(height: 70),
           _deliveryImage(),
           SizedBox(height: 40),
-          _loginBtn(),
+          _loginBtn(context),
           SizedBox(height: 20),
-          _createAccountBtn()
+          _createBtn(context)
         ])));
   }
 }
@@ -81,44 +81,81 @@ Widget _deliveryImage() {
   );
 }
 
-Widget _loginBtn() {
-  // ignore: deprecated_member_use
-  return FlatButton(
-    onPressed: () => {},
-    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 120),
-    shape: new RoundedRectangleBorder(
-      borderRadius: new BorderRadius.circular(50.0),
-    ),
-    child: Text(
-      "Log in",
-      style: GoogleFonts.montserrat(
-        fontSize: 20,
-        color: kWhite,
-        letterSpacing: 0.168,
-        fontStyle: FontStyle.italic,
+Widget _loginBtn(context) {
+  return Container(
+    width: 300,
+    height: 60,
+    // ignore: deprecated_member_use
+    child: FlatButton(
+      onPressed: () => {},
+      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+      shape: new RoundedRectangleBorder(
+        borderRadius: new BorderRadius.circular(30.0),
       ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Text(
+              "Log in                   ",
+              style: GoogleFonts.montserrat(
+                fontSize: 20,
+                color: kWhite,
+                letterSpacing: 0.168,
+                fontStyle: FontStyle.italic,
+              ),
+            ),
+          ),
+          Icon(
+            Icons.add,
+            color: Colors.white,
+          ),
+        ],
+      ),
+      color: kPurple,
     ),
-    color: kPurple,
   );
 }
 
-Widget _createAccountBtn() {
-  // ignore: deprecated_member_use
-  return FlatButton(
-    onPressed: () => {},
-    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 70),
-    shape: new RoundedRectangleBorder(
-      borderRadius: new BorderRadius.circular(50.0),
-    ),
-    child: Text(
-      "Create account",
-      style: GoogleFonts.montserrat(
-        fontSize: 20,
-        color: kPurple,
-        letterSpacing: 0.168,
-        fontStyle: FontStyle.italic,
+Widget _createBtn(context) {
+  return Container(
+    width: 300,
+    height: 60,
+    decoration: BoxDecoration(
+        border: Border.all(width: 1, color: kPurple),
+        borderRadius: BorderRadius.circular(30.0)),
+    // ignore: deprecated_member_use
+    child: FlatButton(
+      onPressed: () => {},
+      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+      shape: new RoundedRectangleBorder(
+        borderRadius: new BorderRadius.circular(30.0),
       ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Text(
+              "Create account",
+              style: GoogleFonts.montserrat(
+                fontSize: 20,
+                color: kPurple,
+                letterSpacing: 0.168,
+                fontStyle: FontStyle.italic,
+              ),
+            ),
+          ),
+          Icon(
+            Icons.add,
+            color: kPurple,
+          ),
+        ],
+      ),
+      color: kWhite,
     ),
-    color: kWhite,
   );
 }
